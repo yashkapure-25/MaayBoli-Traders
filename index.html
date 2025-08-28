@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>मायबोली ट्रेडर्स</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root { --grad-a:#0072ff; --grad-b:#00c6a7; }
+    body{
+      font-family:'Segoe UI',sans-serif;
+      background:linear-gradient(135deg,var(--grad-a),var(--grad-b));
+      color:#fff;
+    }
+    .navbar{ background:rgba(0,0,0,.5); backdrop-filter:saturate(140%) blur(6px); }
+    .logo{ height:48px;width:48px;border-radius:50%;object-fit:cover; }
+    .btn-gradient{
+      background:linear-gradient(45deg,var(--grad-b),var(--grad-a));
+      border:none;border-radius:999px;color:#fff;padding:12px 26px;font-weight:600;
+      transition:.25s transform,.25s opacity;text-decoration:none;
+    }
+    .btn-gradient:hover{ transform:translateY(-2px) scale(1.03); opacity:.95; }
+    .hero{
+      min-height:90vh; display:flex; align-items:center; justify-content:center;
+      text-align:center; padding:72px 16px;
+    }
+    .hero h1{ font-weight:800; letter-spacing:.3px; }
+    .section{ padding:80px 16px; }
+    .card.bg-glass{
+      background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12);
+      border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,.2);
+    }
+    .carousel-item img{ max-height:480px; object-fit:contain; }
+    .footer{ background:rgba(0,0,0,.6); padding:30px 12px; }
+    .social a{ color:#fff; font-size:1.4rem; margin:0 .4rem; transition:.2s transform; }
+    .social a:hover{ transform:translateY(-2px); color:#eafff9; }
+    .disclaimer{ font-size:.9rem; color:#e6fff7; opacity:.9; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+        <img src="logo.png" alt="Logo" class="logo">
+        <span>मायबोली ट्रेडर्स</span>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#about">आमच्याबद्दल</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">सेवा</a></li>
+          <li class="nav-item"><a class="nav-link" href="#basics">स्टॉक मार्केट माहिती</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">यशोगाथा</a></li>
+          <li class="nav-item ms-lg-3">
+            <a href="https://t.me/maayboli_traders_25" class="btn-gradient">Join Telegram</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Live Ticker (TradingView – auto updates) -->
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank"><span class="blue-text">Ticker tape by TradingView</span></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "NSE:TCS",
+      "title": "TCS"
+    },
+    {
+      "proName": "NSE:INFY",
+      "title": "INFY"
+    },
+    {
+      "proName": "NSE:HCLTECH",
+      "title": "HCLTECH"
+    },
+    {
+      "proName": "NSE:WIPRO",
+      "title": "WIPRO"
+    },
+    {
+      "proName": "NSE:TECHM",
+      "title": "Tech Mahindra"
+    },
+    {
+      "proName": "NSE:COFORGE",
+      "title": "COFORAGE"
+    },
+    {
+      "proName": "NSE:LTIM",
+      "title": "LTIM"
+    },
+    {
+      "proName": "NSE:PERSISTENT",
+      "title": "PERSISTANT"
+    },
+    {
+      "proName": "NSE:ADANIPORTS",
+      "title": "AdaniPrts"
+    },
+    {
+      "proName": "NSE:ETERNAL",
+      "title": "Zomato"
+    },
+    {
+      "proName": "NSE:INDIGO",
+      "title": "Indigo"
+    },
+    {
+      "proName": "NSE:SWIGGY",
+      "title": "Swiggy"
+    },
+    {
+      "proName": "NSE:VRLLOG",
+      "title": "Vrl"
+    },
+    {
+      "proName": "NSE:HDFCBANK",
+      "title": "HdfcBnk"
+    },
+    {
+      "proName": "NSE:SBIN",
+      "title": "Sbin"
+    },
+    {
+      "proName": "NSE:ICICIBANK",
+      "title": "ICICI"
+    },
+    {
+      "proName": "NSE:AXISBANK",
+      "title": "Axis Bank"
+    },
+    {
+      "proName": "NSE:BSE",
+      "title": "BSE"
+    },
+    {
+      "proName": "NSE:NIFTY",
+      "title": "Nifty 50"
+    },
+    {
+      "proName": "NSE:BANKNIFTY",
+      "title": "BankNifty "
+    },
+    {
+      "proName": "BSE:SENSEX",
+      "title": "Sensex"
+    }
+  ],
+  "colorTheme": "dark",
+  "locale": "en",
+  "largeChartUrl": "",
+  "isTransparent": false,
+  "showSymbolLogo": true,
+  "displayMode": "adaptive"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+  <!-- Hero -->
+  <header class="hero container text-center">
+    <div class="row justify-content-center">
+      <div class="col-lg-9">
+        <h1 class="mb-3">🚀 मायबोली ट्रेडर्स मध्ये आपले स्वागत</h1>
+        <p class="lead mb-4">शेअर मार्केटमध्ये स्मार्ट गुंतवणूक, रिस्क मॅनेजमेंट आणि रिअल-टाइम अपडेट्स.</p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="https://t.me/maayboli_traders_25" class="btn-gradient">Join Telegram</a>
+          <a href="#basics" class="btn btn-outline-light rounded-pill px-4">स्टॉक मार्केट बेसिक्स</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="mb-3">आमच्याबद्दल</h2>
+          <p>मायबोली ट्रेडर्स ही एक विश्वासार्ह कम्युनिटी आहे जी ताज्या मार्केट अपडेट्स, स्विंग/डे ट्रेड आयडिया, रिस्क-रिवॉर्ड प्लॅन्स आणि सायकोलॉजीवर मार्गदर्शन देते.</p>
+          <ul class="mb-4">
+            <li>इंट्रा-डे, स्विंग आणि ऑप्शन्स स्ट्रॅटेजीज</li>
+            <li>रिअल-टाइम अलर्ट्स व शैक्षणिक कंटेंट</li>
+            <li>मराठीत सोपी समजावणी</li>
+          </ul>
+          <a href="#testimonials" class="btn btn-outline-light rounded-pill px-4">यशोगाथा पहा</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="card bg-glass p-4">
+            <h5 class="mb-3">काय मिळेल?</h5>
+            <div class="row text-center g-3">
+              <div class="col-6"><i class="fa-solid fa-chart-line fa-2x mb-2"></i><div>स्टॉक अ‍ॅनालिसिस</div></div>
+              <div class="col-6"><i class="fa-solid fa-lightbulb fa-2x mb-2"></i><div>ट्रेडिंग टिप्स</div></div>
+              <div class="col-6"><i class="fa-solid fa-bell fa-2x mb-2"></i><div>लाईव्ह अलर्ट्स</div></div>
+              <div class="col-6"><i class="fa-solid fa-shield-halved fa-2x mb-2"></i><div>रिस्क मॅनेजमेंट</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Basic Stock Market Info -->
+  <section id="basics" class="section">
+    <div class="container">
+      <h2 class="text-center mb-4">स्टॉक मार्केटची मूलभूत माहिती</h2>
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="card bg-glass p-4 h-100">
+            <h5>इंडेक्स म्हणजे काय?</h5>
+            <p>निफ्टी 50 व सेन्सेक्स हे भारतातील प्रमुख निर्देशांक आहेत जे टॉप कंपन्यांच्या एकत्रित परफॉर्मन्सला दर्शवतात.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card bg-glass p-4 h-100">
+            <h5>डिलिव्हरी व इंट्रा-डे</h5>
+            <p>डिलिव्हरीमध्ये स्टॉक्स अनेक दिवस ठेवले जातात. इंट्रा-डेमध्ये त्याच दिवशी खरेदी-विक्री केली जाते.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card bg-glass p-4 h-100">
+            <h5>ऑप्शन्स (CE/PE)</h5>
+            <p>कॉल (CE) म्हणजे किंमत वाढेल असा पर्याय, पुट (PE) म्हणजे किंमत कमी होईल असा पर्याय. रिस्क-रिवॉर्ड व ग्रीक समजून ट्रेड करा.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card bg-glass p-4 h-100">
+            <h5>रिस्क मॅनेजमेंट</h5>
+            <p>प्रत्येक ट्रेडला स्टॉप-लॉस ठेवा, 1–2% जोखीम नियम पाळा आणि ओवर-लेव्हरेज टाळा.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card bg-glass p-4 h-100">
+            <h5>ब्रोकर चार्जेस</h5>
+            <p>ब्रोकरेज, STT, एक्स्चेंज, GST, स्टॅम्प ड्युटी मिळून नेट P&L ठरतो. ट्रेडपूर्वी गणित करा.</p>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="card bg-glass p-4 h-100">
+            <h5>शिस्त व सायकोलॉजी</h5>
+            <p>प्लॅननुसार ट्रेड करा, रिव्हेंज ट्रेडिंग टाळा आणि जर्नल ठेवून चुका कमी करा.</p>
+          </div>
+        </div>
+      </div>
+      <p class="disclaimer mt-4">*सूचना: हे शैक्षणिक उद्देशांसाठी आहे. आर्थिक सल्ला नाही. गुंतवणूक करण्यापूर्वी स्वतःचा अभ्यास करा.*</p>
+    </div>
+  </section>
+
+  <!-- Testimonials Carousel (use your screenshots) -->
+  <section id="testimonials" class="section text-center">
+    <div class="container">
+      <h2 class="mb-4">📸 आमचे यशस्वी ट्रेडर्स</h2>
+
+      <div id="profitCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <!-- Replace src paths with your files -->
+          <div class="carousel-item active">
+            <img src="images/profit-1.jpg" class="d-block w-100" alt="Profit Testimonial 1">
+          </div>
+          <div class="carousel-item">
+            <img src="images/profit-2.jpg" class="d-block w-100" alt="Profit Testimonial 2">
+          </div>
+          <div class="carousel-item">
+            <img src="images/profit-3.jpg" class="d-block w-100" alt="Profit Testimonial 3">
+          </div>
+          <div class="carousel-item">
+            <img src="images/profit-4.jpg" class="d-block w-100" alt="Profit Testimonial 4">
+          </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#profitCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#profitCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+
+        <div class="carousel-indicators mt-3">
+          <button type="button" data-bs-target="#profitCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#profitCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#profitCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#profitCarousel" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#profitCarousel" data-bs-slide-to="4"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <div class="container">
+      <p class="mb-2">© 2025 मायबोली ट्रेडर्स | सर्व हक्क राखीव</p>
+      <div class="social mb-3">
+        <div class="social mb-3">
+  <a href="https://t.me/maayboli_traders_25" target="_blank" aria-label="Telegram">
+    <i class="fa-brands fa-telegram"></i>
+  </a>
+  <a href="https://instagram.com/maayboli_traders_" target="_blank" aria-label="Instagram">
+    <i class="fa-brands fa-instagram"></i>
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=61577879082492" target="_blank" aria-label="Facebook">
+    <i class="fa-brands fa-facebook"></i>
+  </a>
+  <a href="mailto:maayboli.traders@gmail.com" aria-label="Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+</div>
+      <a href="https://t.me/maayboli_traders_25" class="btn-gradient">Join Telegram</a>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
